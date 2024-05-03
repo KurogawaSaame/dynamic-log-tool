@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<config>
+	<server>
+		<port>9000</port>
+        <type>tcp</type>
+	</server>
+	<output>
+		<logfile>
+			<enabled>true</enabled>
+			<file>log.txt</file>
+		</logfile>
+		<xesfile>
+			<enabled>true</enabled>
+			<file>log.xes.gz</file>
+		</xesfile>
+		<tcp>
+			<enabled>true</enabled>
+			<host>localhost</host>
+			<port>9001</port>
+		</tcp>
+	</output>
+	<internal>
+		<capacity>
+			<comm-buffer>100</comm-buffer>
+			<case-track>100</case-track>
+			<trace-events>100</trace-events>
+		</capacity>
+	</internal>
+</config>

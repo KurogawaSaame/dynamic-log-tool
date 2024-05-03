@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="1024" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="log_shared" />
+        <module name="log_server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="log_server" target="1.7" />
+      <module name="log_shared" target="1.7" />
+      <module name="log_xes" target="1.7" />
+      <module name="openxes" target="1.7" />
+      <module name="openxes-parent" target="1.5" />
+      <module name="spex" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
