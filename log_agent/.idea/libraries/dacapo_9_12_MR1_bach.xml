@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="dacapo-9.12-MR1-bach">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/avrora" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/batik" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/eclipse" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/fop" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/h2" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/harness" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/jython" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/luindex" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/lusearch" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/lusearch-fix" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/pmd" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/sunflow" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/tomcat" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/tradebeans" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/tradesoap" />
+      <root url="jar://$PROJECT_DIR$/../log_shared/dacapo-9.12-MR1-bach.jar!/doc/xalan" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

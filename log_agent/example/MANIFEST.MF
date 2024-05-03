@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Premain-Class: multitier_log_agent.log_agent.Agent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Can-Set-Native-Method-Prefix: true

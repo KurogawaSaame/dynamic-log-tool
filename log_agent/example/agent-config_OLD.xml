@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<config>
+	<!-- Target server to steam log events to -->
+	<logserver>
+		<host>localhost</host>
+		<port>9000</port>
+	</logserver>
+
+	<!-- Application node identification -->
+	<nodeid>
+		<application>Demo Multi-tier</application>
+		<tier>Presentation</tier>
+		<node>Node A</node>
+	</nodeid>
+
+    <!-- ClassLoader modifiers configuration -->
+    <classloader-modifiers>
+        <modifier-glassfish-webapp />
+    </classloader-modifiers>
+
+	<!-- Code transformation rules configuration -->
+	<transformation-rules>
+
+		<!-- Add logging to custom pointcuts -->
+		<rule-pointcut>
+			<enabled>true</enabled>
+			<includes>
+				<include>multitier_log_agent.*</include>
+			</includes>
+			<pointcuts>
+				<pointcut>
+					<has-interface>InterfaceB</has-interface>
+					<region>NodeA</region>
+					<region>IntB</region>
+					<region>CommAB</region>
+				</pointcut>
+				<pointcut>
+					<method-pattern>*Model.get*</method-pattern>
+                    <region>NodeA</region>
+					<region>IntC</region>
+					<region>CommAC</region>
+				</pointcut>
+				<pointcut>
+				    <trace-calls>true</trace-calls>
+					<method-pattern>*Model.get*</method-pattern>
+                    <call-pattern>*Model.get*</call-pattern>
+					<region>NodeA</region>
+					<region>ModelGetMethods</region>
+				</pointcut>
+			</pointcuts>
+		</rule-pointcut>
+
+		<!-- Add logging to Socket connect and close -->
+		<rule-socket>
+			<enabled>true</enabled>
+		</rule-socket>
+
+		<!-- Add logging to SocketChannel connect -->
+		<rule-socket-channel>
+			<enabled>false</enabled> <!-- Not properly investigated -->
+		</rule-socket-channel>
+
+		<!-- Add logging to javax Servlet joinpoints -->
+		<rule-servlet>
+			<enabled>true</enabled>
+			<includes>
+                <include>javax.servlet.*</include>
+			</includes>
+		</rule-servlet>
+
+	</transformation-rules>
+</config>

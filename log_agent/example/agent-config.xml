@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<config>
+	<!-- Target server to steam log events to -->
+	<logserver>
+		<host>localhost</host>
+		<port>9000</port>
+        <type>tcp</type>
+	</logserver>
+
+	<!-- Application node identification -->
+	<nodeid>
+		<application>Demo Multi-tier</application>
+		<tier>Presentation</tier>
+		<node>Node A</node>
+	</nodeid>
+
+    <!-- ClassLoader modifiers configuration -->
+    <classloader-modifiers>
+        <modifier-glassfish-webapp />
+    </classloader-modifiers>
+
+	<!-- Code transformation rules configuration -->
+	<transformation-rules>
+
+		<!-- Add logging to custom pointcuts -->
+
+		<method-pointcut>
+			<enabled>true</enabled>
+			<include>multitier_log_agent.*.main*</include>
+			<trace-catch>true</trace-catch>
+            <trace-constructor>true</trace-constructor>
+            <trace-params>true</trace-params>
+		</method-pointcut>
+
+		<interface-pointcut>
+			<enabled>true</enabled>
+			<include>multitier_log_agent.*.InterfaceB</include>
+			<trace-catch>true</trace-catch>
+            <region>CommAB</region>
+		</interface-pointcut>
+
+		<method-call-pointcut>
+			<enabled>true</enabled>
+			<include>multitier_log_agent.*.get*</include>
+            <include>multitier_log_agent.*.set*</include>
+			<call-pattern>multitier_log_agent.*</call-pattern>
+			<trace-catch>true</trace-catch>
+		</method-call-pointcut>
+
+		<!-- Add logging to Socket connect and close -->
+		<socket>
+			<enabled>true</enabled>
+		</socket>
+
+		<!-- Add logging to SocketChannel connect -->
+		<socket-channel>
+			<enabled>false</enabled> <!-- Not properly investigated -->
+		</socket-channel>
+
+		<!-- Add logging to javax Servlet joinpoints -->
+		<servlet>
+			<enabled>true</enabled>
+            <include>javax.servlet.*</include>
+		</servlet>
+
+	</transformation-rules>
+</config>
