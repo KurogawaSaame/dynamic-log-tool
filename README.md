@@ -13,7 +13,7 @@ log_shared contains the data object classes for communication between log_agent 
 ## How to use it
 ### before use it (configuration)
 Both *log_agent* and *log_server* will read the corresponding configuration files after running. log_agent is agent-config.xml and log_server is config.xml, which need to be placed in the same directory as the *log_agent* and *log_server* jar files when running.
-#### [agent-config.xml]([dynamic-log-tool/agent-config.xml at master · KurogawaSaame/dynamic-log-tool (github.com)](https://github.com/KurogawaSaame/dynamic-log-tool/blob/master/agent-config.xml))
+#### [agent-config.xml](https://github.com/KurogawaSaame/dynamic-log-tool/blob/master/agent-config.xml)
 
 **The following is a description of some of the important configuration items in the configuration file.** 
 
