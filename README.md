@@ -13,7 +13,7 @@ log_shared contains the data object classes for communication between log_agent 
 ## How to use it
 ### before use it (configuration)
 Both *log_agent* and *log_server* will read the corresponding configuration files after running. log_agent is agent-config.xml and log_server is config.xml, which need to be placed in the same directory as the *log_agent* and *log_server* jar files when running.
-#### agent-config.xml
+#### [agent-config.xml]([dynamic-log-tool/agent-config.xml at master · KurogawaSaame/dynamic-log-tool (github.com)](https://github.com/KurogawaSaame/dynamic-log-tool/blob/master/agent-config.xml))
 
 **The following is a description of some of the important configuration items in the configuration file.** 
 
@@ -59,11 +59,11 @@ Both *log_agent* and *log_server* will read the corresponding configuration file
 
 `<trace-constructor>` configures whether or not to instrument constructor methods.
 
-`<mine_pattern>` has three optional values that indicate the type of logging output. pure outputs only the method execution trace including basic information about the method; common outputs class information about the class to which the method belongs on top of pure; and param outputs parameters and return values for each method execution on top of pure.
+`<mine_pattern>` has three optional values that indicate the type of logging output. *pure* outputs only the method execution trace including basic information about the method; *common* outputs class information about the class to which the method belongs on top of *pure*; and *param* outputs parameters and return values for each method execution on top of pure. There is a [example](https://github.com/KurogawaSaame/dynamic-log-tool/blob/master/example%20log%20for%20pure%20pattern.txt) log file of *pure* pattern.
 
 
 
-#### config.xml
+#### [config.xml](https://github.com/KurogawaSaame/dynamic-log-tool/blob/master/config.xml)
 
 **The following is a description of some of the important configuration items in the configuration file.** 
 
